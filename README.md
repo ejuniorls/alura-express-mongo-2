@@ -20,7 +20,7 @@ Para executar o projeto execute o comando abaixo.
 npm run start
 ```
 
-## Aula 01 - Criando o projeto com Node.js Ver primeiro vídeo
+## Aula 01 - Criando o projeto com Node.js
 
 ## Aula 02 - Express e primeiras rotas
 
