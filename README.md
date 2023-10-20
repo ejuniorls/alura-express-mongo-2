@@ -22,7 +22,13 @@ npm run start
 
 ## Aula 01 - Criando o projeto com Node.js
 
+Neste curso usaremos o Node.js para construir uma API REST utilizando o framework Express.
+
 ## Aula 02 - Express e primeiras rotas
+
+Durante esta aula utilizaremos o Postman para testar as requisições e as rotas. É importante que você já tenha o Postman instalado em seu computador a partir de agora para acompanhar o que será feito nos vídeos.
+
+O arquivo **Alura - Node.js com Express e MongoDB.postman_collection.json** foi disponibilizado com as rotas e será atualizado a cada aula.
 
 ## Aula 03 - Persistindo dados
 
