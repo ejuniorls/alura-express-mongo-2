@@ -32,7 +32,7 @@ O arquivo **Alura - Node.js com Express e MongoDB.postman_collection.json** foi 
 
 ## Aula 03 - Persistindo dados
 
-Nessa aula será inserido o banco NoSQL MongoDB no projeto.
+Nessa aula será inserido o banco NoSQL MongoDB no projeto. Utilizaremos a versão Cloud Atlas do MongoDB. O arquivo .env deve ser preenchido com os dados de acesso do banco.
 
 ## Aula 04 - Evoluindo a API
 
