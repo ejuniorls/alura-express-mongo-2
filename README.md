@@ -32,6 +32,8 @@ O arquivo **Alura - Node.js com Express e MongoDB.postman_collection.json** foi 
 
 ## Aula 03 - Persistindo dados
 
+Nessa aula será inserido o banco NoSQL MongoDB no projeto.
+
 ## Aula 04 - Evoluindo a API
 
 ## Aula 05 - Adicionando funcionalidades
