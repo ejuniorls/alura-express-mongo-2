@@ -36,4 +36,6 @@ Nessa aula será inserido o banco NoSQL MongoDB no projeto. Utilizaremos a vers�
 
 ## Aula 04 - Evoluindo a API
 
+Criação de controllers e routes para apartar as funções de **app.js**.
+
 ## Aula 05 - Adicionando funcionalidades
