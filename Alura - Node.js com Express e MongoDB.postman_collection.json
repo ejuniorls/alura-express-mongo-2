@@ -7,130 +7,251 @@
 	},
 	"item": [
 		{
-			"name": "index",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}:{{port}}",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}"
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "livros",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}:{{port}}/livros",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"livros"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "livros by id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}:{{port}}/livros/2",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"livros",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "livros",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": 3,\r\n    \"titulo\": \"O Silmarillion\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}"
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{host}}:{{port}}/livros",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"livros"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "livros",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"O Silmarillion 2\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "livros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/livros",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"livros"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{host}}:{{port}}/livros/3",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"livros",
-						"3"
-					]
+				{
+					"name": "livros by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/livros/650e27b2884e35f2ca25c99b",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"livros",
+								"650e27b2884e35f2ca25c99b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "livros",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Teste de Livro 3\",\r\n    \"editora\": \"Rocco\",\r\n    \"preco\": 20,\r\n    \"paginas\": 180,\r\n    \"autor\": \"650c50c8dae0a893e6f9c128\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/livros",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "livros",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Teste de Livro 3\",\r\n    \"editora\": \"Rocco\",\r\n    \"preco\": 20,\r\n    \"paginas\": 180,\r\n    \"autor\": \"650c50c8dae0a893e6f9c128\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/livros/6536de1b04d90f4142e8ab31",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"livros",
+								"6536de1b04d90f4142e8ab31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "livros",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/livros/6536de1b04d90f4142e8ab31",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"livros",
+								"6536de1b04d90f4142e8ab31"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "livros Copy",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{host}}:{{port}}/livros/1",
-					"host": [
-						"{{host}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"livros",
-						"1"
-					]
+			"name": "autores",
+			"item": [
+				{
+					"name": "autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/autores",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "autores by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/autores/650c50c8dae0a893e6f9c128",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"autores",
+								"650c50c8dae0a893e6f9c128"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "autores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bob Esponja\",\r\n    \"nacionalidade\": \"Fenda do biquine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/autores",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "autores",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bob Esponja\",\r\n    \"nacionalidade\": \"Fenda do biquine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/autores/6536dc4604d90f4142e8ab2b",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"autores",
+								"6536dc4604d90f4142e8ab2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "autores",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/autores/6536dc4604d90f4142e8ab2b",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"autores",
+								"6536dc4604d90f4142e8ab2b"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"event": [
