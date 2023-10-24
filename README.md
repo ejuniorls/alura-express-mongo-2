@@ -14,9 +14,15 @@ Faça esse curso de Node.JS e:
 - Proteger informações sensíveis com o dotenv
 - Configurar o ESLint para formatar o código e identificar bugs
 - Refatorar o código com async/await
-- Refatorar o código com async/await
+- Identificar e tratar erros específicos de uma rota
+
 
 ### Aula 02 - Avançando o tratamento de erros
+- Criar e utilizar um middleware de manipulador de erros
+- Identificar e tratar erros de validação
+- Refatorar o manipulador de erros utilizando classes
+- Criar um middleware para tratar páginas 404
+
 ### Aula 03 - Validando os dados
 ### Aula 04 - Avançando em buscas e filtros
 ### Aula 05 - Implementando paginação
