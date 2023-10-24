@@ -1,41 +1,22 @@
-# Node.js: criando uma API Rest com Express e MongoDB
+# Node.js: lidando com buscas, filtros, paginação e erros em uma API
+
 
 Faça esse curso de Node.JS e:
-- Aprenda a criar uma API do zero, seguindo o estilo arquitetural REST
-- Entenda como as requisições HTTP funcionam
-- Conheça o framework Express, utilizado para desenvolver aplicações robustas e escaláveis
-- Conecte sua API com um banco de dados MongoDB
-- Crie buscas por campos específicos na API
+- Aprenda a tratar erros de uma API de forma elegante
+- Aplique validações do mongoose para garantir dados mais consistentes no MongoDB
+- Avance em buscas e filtros e utilize os operadores do MongoDB
+- Implemente paginação e reutilize-a em diferentes rotas
+- Entenda o que são os middlewares do Express e como eles podem ajudar em todo o desenvolvimento da API
 
-Depois de clonar o projeto, acesse o diretório do projeto e instale as dependências
 
-```bash
-npm i
+## Aulas
+### Aula 01 - Deixando nossa API resiliente
+- Proteger informações sensíveis com o dotenv
+- Configurar o ESLint para formatar o código e identificar bugs
+- Refatorar o código com async/await
+- Refatorar o código com async/await
 
-```
-
-Para executar o projeto execute o comando abaixo.
-
-```bash
-npm run start
-```
-
-## Aula 01 - Criando o projeto com Node.js
-
-Neste curso usaremos o Node.js para construir uma API REST utilizando o framework Express.
-
-## Aula 02 - Express e primeiras rotas
-
-Durante esta aula utilizaremos o Postman para testar as requisições e as rotas. É importante que você já tenha o Postman instalado em seu computador a partir de agora para acompanhar o que será feito nos vídeos.
-
-O arquivo **Alura - Node.js com Express e MongoDB.postman_collection.json** foi disponibilizado com as rotas e será atualizado a cada aula.
-
-## Aula 03 - Persistindo dados
-
-Nessa aula será inserido o banco NoSQL MongoDB no projeto. Utilizaremos a versão Cloud Atlas do MongoDB. O arquivo .env deve ser preenchido com os dados de acesso do banco.
-
-## Aula 04 - Evoluindo a API
-
-Criação de controllers e routes para apartar as funções de **app.js**.
-
-## Aula 05 - Adicionando funcionalidades
+### Aula 02 - Avançando o tratamento de erros
+### Aula 03 - Validando os dados
+### Aula 04 - Avançando em buscas e filtros
+### Aula 05 - Implementando paginação
