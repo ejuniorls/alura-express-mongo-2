@@ -4,6 +4,8 @@ class LivroController {
 
     static async listarLivros(req, res) {
         try {
+            throw new Error();
+            
             const listaLivros = await livro.find({});
             res.status(200).json(listaLivros);
         } catch (erro) {
