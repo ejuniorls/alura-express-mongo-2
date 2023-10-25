@@ -1,3 +1,4 @@
+import NaoEncontrado from "../erros/NaoEncontrado.js";
 import { autor } from "../models/Autor.js";
 // import mongoose from "mongoose";
 
@@ -20,7 +21,7 @@ class AutorController {
             if (autorEncontrado !== null) {
                 res.status(200).json(autorEncontrado);
             } else {
-                res.status(404).send({ message: "Id do Autor não localizado." });
+                next(new NaoEncontrado("Id do autor não localizado"));
             }
         } catch (erro) {
             next(erro);
