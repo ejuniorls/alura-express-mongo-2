@@ -26,5 +26,8 @@ Faça esse curso de Node.JS e:
 - Aplicar um validador global
 
 ### Aula 04 - Avançando em buscas e filtros
+- Buscar pelos títulos dos livros de forma dinâmica
+- Filtrar os livros por número de páginas
+- Buscar livros pelo nome do autor
 
 ### Aula 05 - Implementando paginação
