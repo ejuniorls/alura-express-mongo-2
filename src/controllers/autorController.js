@@ -1,7 +1,7 @@
 import NaoEncontrado from "../erros/NaoEncontrado.js";
 import { autores } from "../models/index.js";
 
-class autorController {
+class AutorController {
     static listarAutores = async (req, res) => {
         try {
             const autoresResultado = await autores.find();
@@ -75,4 +75,4 @@ class autorController {
     };
 }
 
-export default autorController;
+export default AutorController;

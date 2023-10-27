@@ -1,7 +1,7 @@
 import NaoEncontrado from "../erros/NaoEncontrado.js";
-import { livros } from "../models/index.js";
+import { autores, livros } from "../models/index.js";
 
-class livroController {
+class LivroController {
 
     static listarLivros = async (req, res, next) => {
         try {
@@ -51,8 +51,6 @@ class livroController {
 
             const livroResultado = await livros.findByIdAndUpdate(id, { $set: req.body });
 
-            console.log(livroResultado);
-
             if (livroResultado !== null) {
                 res.status(200).send({ message: "Livro atualizado com sucesso" });
             } else {
@@ -69,8 +67,6 @@ class livroController {
 
             const livroResultado = await livros.findByIdAndDelete(id);
 
-            console.log(livroResultado);
-
             if (livroResultado !== null) {
                 res.status(200).send({ message: "Livro removido com sucesso" });
             } else {
@@ -83,22 +79,49 @@ class livroController {
 
     static listarLivroPorFiltro = async (req, res, next) => {
         try {
-            const { editora, titulo } = req.query;
+            const busca = await processaBusca(req.query);
 
-            const regex = new RegExp(titulo, "i");
+            if (busca !== null) {
+                const livrosResultado = await livros
+                    .find(busca)
+                    .populate("autor");
 
-            const busca = {};
-
-            if (editora) busca.editora = editora;
-            if (titulo) busca.titulo = regex;
-
-            const livrosResultado = await livros.find(busca);
-
-            res.status(200).send(livrosResultado);
+                res.status(200).send(livrosResultado);
+            } else {
+                res.status(200).send([]);
+            }
         } catch (erro) {
             next(erro);
         }
     };
 }
 
-export default livroController;
+async function processaBusca(parametros) {
+    const { editora, titulo, minPaginas, maxPaginas, nomeAutor } = parametros;
+
+    let busca = {};
+
+    if (editora) busca.editora = editora;
+    if (titulo) busca.titulo = { $regex: titulo, $options: "i" };
+
+    if (minPaginas || maxPaginas) busca.numeroPaginas = {};
+
+    // gte = Greater Than or Equal = Maior ou igual que
+    if (minPaginas) busca.numeroPaginas.$gte = minPaginas;
+    // lte = Less Than or Equal = Menor ou igual que
+    if (maxPaginas) busca.numeroPaginas.$lte = maxPaginas;
+
+    if (nomeAutor) {
+        const autor = await autores.findOne({ nome: nomeAutor });
+
+        if (autor !== null) {
+            busca.autor = autor._id;
+        } else {
+            busca = null;
+        }
+    }
+
+    return busca;
+}
+
+export default LivroController;
