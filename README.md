@@ -31,3 +31,7 @@ Faça esse curso de Node.JS e:
 - Buscar livros pelo nome do autor
 
 ### Aula 05 - Implementando paginação
+- Paginar uma rota
+- Ordenar os resultados
+- Reutilizar a lógica de paginação em um middleware
+- Compartilhar informações entre middlewares
